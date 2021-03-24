@@ -34,7 +34,7 @@ s.PE_imphash() #:Return ImportHash
 s.PE_type() #:Return Type File ("DLL", "DRIVER", "EXE") 
 s.PE_arch() #:Return return architecteur (x86 , x64 , Itanium)
 s.PE_hash()#:Return hash(MD5,SHA512, SHA256)
-s.check_antiVM()#:return Check if there an Anti Vmware Machines
+s.PE_check_antiVM()#:return Check if there an Anti Vmware Machines
 s.PE_sections()#:return Section (name, address, virtual_size , size , entropy)
 s.PE_entrypoint()#:return AddressOfEntryPoint
 s.PE_imagebase()#:return IMageBase
