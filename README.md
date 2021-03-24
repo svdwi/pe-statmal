@@ -8,8 +8,6 @@
 
 Stand-alone Python script for analyze PE file header and sections (number of sections, entropy of sections, suspicious section names, suspicious flags in characteristics of PE file etc ...) .
 
-I personally use this script almost daily during personal and professional research to quickly extract important information to determine if further analysis is needed .  
-
 ## Features
 
 - File name
