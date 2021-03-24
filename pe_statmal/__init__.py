@@ -131,7 +131,7 @@ class PEstatmal():
 
 
 
-	def check_antiVM(self):
+	def PE_check_antiVM(self):
 
 		"""
 		:return Check if there an Anti Vmware Machines 			
