@@ -59,7 +59,7 @@ class PEstatmal():
  
 		'ImpHash': self.PE_imphash(),
 		#'SSDeep': self.PE_ssdeep(),
-		'Hashes': self.F_Hash(),
+		'Hashes': self.PE_hash(),
 		'Anti_VM': self.check_antiVM(self.filepath),
 		'Type': self.PE_type(),
 		'os': self.PE_os(),
@@ -95,7 +95,7 @@ class PEstatmal():
 		if self.pe.is_exe(): rtype = 'EXE'
 		return rtype
 
-	def F_Hash(self):
+	def PE_hash(self):
 		"""
 		:return hash
 		
@@ -131,7 +131,7 @@ class PEstatmal():
 
 
 
-	def check_antiVM(self,filename):
+	def check_antiVM(self):
 
 		"""
 		:return Check if there an Anti Vmware Machines 			
@@ -153,7 +153,7 @@ class PEstatmal():
 			"Torpig VMM Trick": "\xE8\xED\xFF\xFF\xFF\x25\x00\x00\x00\xFF\x33\xC9\x3D\x00\x00\x00\x80\x0F\x95\xC1\x8B\xC1\xC3",
 			"Torpig (UPX) VMM Trick": "\x51\x51\x0F\x01\x27\x00\xC1\xFB\xB5\xD5\x35\x02\xE2\xC3\xD1\x66\x25\x32\xBD\x83\x7F\xB7\x4E\x3D\x06\x80\x0F\x95\xC1\x8B\xC1\xC3"
 			}
-		with open(filename, "rb") as f:
+		with open(self.filepath, "rb") as f:
 			buf = f.read()
 			for string in VM_STRINGS:
 				match = re.findall(VM_STRINGS[string], buf, re.IGNORECASE | re.MULTILINE)
