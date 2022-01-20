@@ -28,23 +28,26 @@ from pe_statmal import PEstatmal
 
 s = PEstatmal("file.exe") #:Add filename
 
-s.PE_imphash() #:Return ImportHash   
-s.PE_type() #:Return Type File ("DLL", "DRIVER", "EXE") 
-s.PE_arch() #:Return return architecteur (x86 , x64 , Itanium)
-s.PE_hash()#:Return hash(MD5,SHA512, SHA256)
-s.PE_check_antiVM()#:return Check if there an Anti Vmware Machines
-s.PE_sections()#:return Section (name, address, virtual_size , size , entropy)
-s.PE_entrypoint()#:return AddressOfEntryPoint
-s.PE_imagebase()#:return IMageBase
-s.PE_enty_import()#:return  EntryImports (Entry_Name , Symbols)
-s.PE_entry_export()#:return  EntryExports (Address , Name , Ordinal )
-s.PE_os()#:return  Os Version 	
-s.PE_security()#:return Security (ASLR ,DEP ,SEH, and More )
-s.PE_time()#:return TimeData Compiled	
-s.run() #Return all fonctions 
+s.PE_imphash() # Return ImportHash   
+s.PE_type() # Return Type File ("DLL", "DRIVER", "EXE") 
+s.PE_arch() # Return return architecteur (x86 , x64 , Itanium)
+s.PE_hash() # Return hash(MD5,SHA512, SHA256)
+s.PE_check_antiVM() # return Check if there an Anti Vmware Machines
+s.PE_sections() # return Section (name, address, virtual_size , size , entropy)
+s.PE_entrypoint() # return AddressOfEntryPoint
+s.PE_imagebase() # return IMageBase
+s.PE_enty_import() # return  EntryImports (Entry_Name , Symbols)
+s.PE_entry_export() # return  EntryExports (Address , Name , Ordinal )
+s.PE_os() # return Os Version 	
+s.PE_security() # return Security (ASLR ,DEP ,SEH, and More )
+s.PE_time() # return TimeData Compiled	
+s.run() # Return all fonctions 
  
 ```
 
 ## Installation
-1. git clone https://github.com/svdwi/pe-statmal
-2. cd pe_stamal && pip install -r requirements.txt
+Clone the repo : 
+
+    $ git clone https://github.com/svdwi/pe-statmal
+    $ cd pe_stamal && pip install -r requirements.txt
+
